@@ -61,14 +61,21 @@
   
   <div class="input-group flex-nowrap">
   <span class="input-group-text" id="addon-wrapping">Content</span>
-  <input id="messageText" type="text" class="form-control" placeholder="Text" aria-label="Username" aria-describedby="addon-wrapping">
+  <input id="messageText" type="text" class="form-control" placeholder="Text" aria-label="WebHookText" aria-describedby="addon-wrapping">
   </div>
 	
   <br>
 
   <div class="input-group flex-nowrap">
   <span class="input-group-text" id="addon-wrapping">WebHook URL</span>
-  <input id="messageURL" type="text" class="form-control" placeholder="Text" aria-label="Username" aria-describedby="addon-wrapping">
+  <input id="messageURL" type="url" class="form-control" placeholder="WebHook URL" aria-label="WebHookURL" aria-describedby="addon-wrapping">
+  </div>
+
+  <br>
+
+  <div class="input-group flex-nowrap">
+  <span class="input-group-text" id="addon-wrapping">Avater image URL</span>
+  <input id="imageURL" type="url" class="form-control" placeholder="Image URL" aria-label="ImageURL" aria-describedby="addon-wrapping">
   </div>
   
     <br>
@@ -86,9 +93,10 @@
       
       var whMessageText = document.getElementById('messageText').value
       var whMessageName = document.getElementById('messageName').value
+      var whImageURL = document.getElementById('imageURL').value
       var params = {
         username: `${whMessageName}`,
-        avatar_url: "",
+        avatar_url: `${whImageURL}`,
         content: `${whMessageText}`
       }
 
