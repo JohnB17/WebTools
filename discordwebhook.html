@@ -63,6 +63,11 @@
   <span class="input-group-text" id="addon-wrapping">Content</span>
   <input id="messageText" type="text" class="form-control" placeholder="Text" aria-label="Username" aria-describedby="addon-wrapping">
   </div>
+
+  <div class="input-group flex-nowrap">
+  <span class="input-group-text" id="addon-wrapping">WebHook URL</span>
+  <input id="messageURL" type="text" class="form-control" placeholder="Text" aria-label="Username" aria-describedby="addon-wrapping">
+  </div>
   
     <br>
     <button type="button" class="btn btn-primary" onclick="sendMessage()">Send</button>
@@ -72,7 +77,8 @@
   <script>
     function sendMessage() {
       var request = new XMLHttpRequest();
-      request.open("POST", "https://discord.com/api/webhooks/793678508118507520/p5xUsUO-MKAHZjFQsFR67XPz2KcbFOzIsGIcSbxq9aIQms1aW1kqtyReUADXf8xWQhD2");
+      var whMessageURL = document.getElementById('messageURL').value
+      request.open("POST", `${whMessageURL}`);
 
       request.setRequestHeader('Content-type', 'application/json');
       
