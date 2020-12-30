@@ -22,10 +22,10 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
+          <a class="nav-link active" aria-current="page" href="index.html">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
+          <a class="nav-link" href="discordwebhook.html">Discord WebHook</a>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -49,42 +49,7 @@
     </div>
   </div>
 </nav>
-  
-<div>
 <br>
-  <div class="input-group flex-nowrap">
-  <span class="input-group-text" id="addon-wrapping">Name</span>
-  <input id="messageName" type="text" class="form-control" placeholder="Text" aria-label="Username" aria-describedby="addon-wrapping">
-  </div>
-  
-  <br>
-  
-  <div class="input-group flex-nowrap">
-  <span class="input-group-text" id="addon-wrapping">Content</span>
-  <input id="messageText" type="text" class="form-control" placeholder="Text" aria-label="Username" aria-describedby="addon-wrapping">
-  </div>
-  
-    <br>
-    <button type="button" class="btn btn-primary" onclick="sendMessage()">Send</button>
-</div>
+	  <h1>WebTools</h1>
   </body>
-
-  <script>
-    function sendMessage() {
-      var request = new XMLHttpRequest();
-      request.open("POST", "https://discord.com/api/webhooks/793678508118507520/p5xUsUO-MKAHZjFQsFR67XPz2KcbFOzIsGIcSbxq9aIQms1aW1kqtyReUADXf8xWQhD2");
-
-      request.setRequestHeader('Content-type', 'application/json');
-      
-      var whMessageText = document.getElementById('messageText').value
-      var whMessageName = document.getElementById('messageName').value
-      var params = {
-        username: `${whMessageName}`,
-        avatar_url: "",
-        content: `${whMessageText}`
-      }
-
-      request.send(JSON.stringify(params));
-    }
-  </script>
 </html>
