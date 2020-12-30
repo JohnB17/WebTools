@@ -53,26 +53,30 @@
 <div>
 <br>
   <div class="input-group flex-nowrap">
+  <p style="color: red;">*</p>
   <span class="input-group-text" id="addon-wrapping">Name</span>
-  <input id="messageName" type="text" class="form-control" placeholder="Text" aria-label="Username" aria-describedby="addon-wrapping">
+  <input id="messageName" type="text" class="form-control" placeholder="Text" aria-label="Username" aria-describedby="addon-wrapping" required>
   </div>
   
   <br>
   
   <div class="input-group flex-nowrap">
   <span class="input-group-text" id="addon-wrapping">Content</span>
-  <input id="messageText" type="text" class="form-control" placeholder="Text" aria-label="Username" aria-describedby="addon-wrapping">
+  <input id="messageText" type="text" class="form-control" placeholder="Text" aria-label="Username" aria-describedby="addon-wrapping" required>
   </div>
 	
   <br>
 
   <div class="input-group flex-nowrap">
   <span class="input-group-text" id="addon-wrapping">WebHook URL</span>
-  <input id="messageURL" type="text" class="form-control" placeholder="Text" aria-label="Username" aria-describedby="addon-wrapping">
+  <input id="messageURL" type="text" class="form-control" placeholder="Text" aria-label="Username" aria-describedby="addon-wrapping" required>
   </div>
   
     <br>
     <button type="button" class="btn btn-primary" onclick="sendMessage()">Send</button>
+    <br>
+    <br>
+    <p style="color: red;">*</p><p> = required</p>
 </div>
   </body>
 
